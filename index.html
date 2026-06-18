@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Státy světa - REST API</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+<header>
+    <div class="header-container">
+        <h1><i class="fa-solid fa-earth-europe"></i> Země Světa</h1>
+        <button id="theme-toggle" class="btn-theme">
+            <i class="fa-regular fa-moon"></i> Tmavý režim
+        </button>
+    </div>
+</header>
+
+<main>
+    <section class="controls">
+        <div class="search-wrapper">
+            <i class="fa-solid fa-magnifying-glass search-icon"></i>
+            <input type="text" id="search-input" placeholder="Hledat zemi podle názvu...">
+        </div>
+
+        <div class="select-wrapper">
+            <select id="region-filter">
+                <option value="">Všechny regiony</option>
+                <option value="Africa">Afrika</option>
+                <option value="Americas">Amerika</option>
+                <option value="Asia">Asie</option>
+                <option value="Europe">Evropa</option>
+                <option value="Oceania">Oceánie</option>
+            </select>
+        </div>
+    </section>
+
+    <div class="stats">
+        Nalezeno zemí: <span id="countries-count">0</span>
+    </div>
+
+    <div id="loader" class="loader">
+        <i class="fa-solid fa-spinner fa-spin"></i> Načítám data...
+    </div>
+
+    <section id="countries-grid" class="countries-grid"></section>
+</main>
+
+<script src="script.js"></script>
+</body>
+</html>
